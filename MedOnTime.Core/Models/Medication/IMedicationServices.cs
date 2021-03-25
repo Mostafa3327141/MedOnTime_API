@@ -1,10 +1,8 @@
-﻿
-using MedOnTime_WebApp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core
+namespace MedOnTime.Core.Models.Medication
 {
     public interface IMedicationServices
     {

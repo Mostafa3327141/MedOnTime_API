@@ -1,5 +1,5 @@
 ﻿
-using MedOnTime_WebApp;
+using MedOnTime.Core.Models.Medication;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

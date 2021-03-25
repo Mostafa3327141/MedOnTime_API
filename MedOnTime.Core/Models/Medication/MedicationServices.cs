@@ -1,11 +1,10 @@
 ﻿
-using MedOnTime_WebApp;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core
+namespace MedOnTime.Core.Models.Medication
 {
     public class MedicationServices : IMedicationServices
     {
