@@ -28,7 +28,14 @@ namespace MedOnTime_API.Controllers
         [HttpGet("{id}", Name = "GetMedication")]
         public IActionResult GetMedication(string id)
         {
-            return Ok(_medicationServices.GetMedication(id));
+            if (String.IsNullOrEmpty(id))
+            {
+                return BadRequest("Value must be passed in the request body.");
+            }
+            else
+            {
+                return Ok(_medicationServices.GetMedication(id));
+            }
         }
 
         [HttpPost]
@@ -41,8 +48,15 @@ namespace MedOnTime_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteMedication(string id)
         {
-            _medicationServices.DeleteMedication(id);
-            return NoContent();
+            if (String.IsNullOrEmpty(id))
+            {
+                return BadRequest("Value must be passed in the request body.");
+            }
+            else
+            {
+                _medicationServices.DeleteMedication(id);
+                return NoContent();
+            }
         }
 
         [HttpPut]
