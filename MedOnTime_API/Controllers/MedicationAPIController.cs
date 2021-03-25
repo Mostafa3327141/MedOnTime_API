@@ -35,7 +35,14 @@ namespace MedOnTime_API.Controllers
         public IActionResult AddMedication(Medication medication)
         {
             _medicationServices.AddMedication(medication);
-            return Ok(medication);
+            return CreatedAtRoute("GetBook", new { id = medication.Id }, medication);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteMedication(string id)
+        {
+            _medicationServices.DeleteMedication(id);
+            return NoContent();
         }
     }
 }

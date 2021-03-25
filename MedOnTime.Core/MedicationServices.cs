@@ -9,28 +9,33 @@ namespace MedOnTime.Core
 {
     public class MedicationServices : IMedicationServices
     {
-        private readonly IMongoCollection<Medication> _medicationCollection;
+        private readonly IMongoCollection<Medication> _medications;
 
         //public MongoClientSettings ConfigurationManager { get; }
 
         public MedicationServices(IDBClient dbClient)
         {
-            _medicationCollection = dbClient.GetMedicationCollection();
+            _medications = dbClient.GetMedicationCollection();
 
         }
 
         public Medication AddMedication(Medication medication)
         {
-            _medicationCollection.InsertOne(medication);
+            _medications.InsertOne(medication);
             return medication;
+        }
+
+        public void DeleteMedication(string id)
+        {
+            _medications.DeleteOne(medication => medication.Id == id);
         }
 
         public Medication GetMedication(string id)
         {
-            return _medicationCollection.Find(medication => medication.Id == id).First();
+            return _medications.Find(medication => medication.Id == id).First();
         }
 
-        public List<Medication> GetMedications() => _medicationCollection.Find(medication => true).ToList(); 
+        public List<Medication> GetMedications() => _medications.Find(medication => true).ToList(); 
     }
 
 }
