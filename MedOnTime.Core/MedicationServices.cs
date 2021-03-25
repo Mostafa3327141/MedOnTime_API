@@ -35,7 +35,17 @@ namespace MedOnTime.Core
             return _medications.Find(medication => medication.Id == id).First();
         }
 
-        public List<Medication> GetMedications() => _medications.Find(medication => true).ToList(); 
+        public List<Medication> GetMedications() => _medications.Find(medication => true).ToList();
+
+        public Medication UpdateMedication(Medication medicationToUpdate)
+        {
+
+            GetMedication(medicationToUpdate.Id);
+            _medications.ReplaceOne(m => m.Id == medicationToUpdate.Id, medicationToUpdate);
+            return medicationToUpdate;
+
+            throw new NotImplementedException();
+        }
     }
 
 }

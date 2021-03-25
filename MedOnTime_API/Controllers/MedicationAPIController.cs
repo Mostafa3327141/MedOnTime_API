@@ -44,5 +44,11 @@ namespace MedOnTime_API.Controllers
             _medicationServices.DeleteMedication(id);
             return NoContent();
         }
+
+        [HttpPut]
+        public IActionResult UpdateMedication(Medication medicationToUpdate)
+        {
+            return Ok(_medicationServices.UpdateMedication(medicationToUpdate));
+        }
     }
 }

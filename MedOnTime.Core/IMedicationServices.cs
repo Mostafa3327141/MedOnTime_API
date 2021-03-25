@@ -14,6 +14,8 @@ namespace MedOnTime.Core
         Medication AddMedication(Medication medication);
 
         void DeleteMedication(string id);
+
+        Medication UpdateMedication(Medication medication);
         
     }
 }
