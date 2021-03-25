@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MedOnTime.Core.Models.Medication;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MedOnTime_WebApp;
-using MedOnTime.Core.Models.Interface;
-using MedOnTime_WebApp.Models;
 
 namespace MedOnTime_API.Controllers
 {

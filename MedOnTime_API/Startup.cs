@@ -1,6 +1,5 @@
 using MedOnTime.Core;
-using MedOnTime.Core.Models;
-using MedOnTime.Core.Models.Interface;
+using MedOnTime.Core.Models.Medication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
