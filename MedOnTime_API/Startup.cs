@@ -1,4 +1,5 @@
 using MedOnTime.Core;
+using MedOnTime.Core.Models.CaretakerNameSpace;
 using MedOnTime.Core.Models.MedicationNameSpace;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,7 @@ namespace MedOnTime_API
             services.AddSingleton<IDBClient, DBClient>();
             services.Configure<MedOnTimeDBConfig>(Configuration);
             services.AddTransient<IMedicationServices, MedicationServices>();
+            services.AddTransient<ICaretakerServices, CaretakerServices>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

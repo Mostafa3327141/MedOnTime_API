@@ -23,7 +23,7 @@ namespace MedOnTime.Core
             _medications = database.GetCollection<Medication>(medOnTimeDBConfig.Value.Medication_Collection_Name);
 
             //Patient collection
-            _patients = database.GetCollection<Patient>(medOnTimeDBConfig.Value.Patient_Collection_Name);
+            //_patients = database.GetCollection<Patient>(medOnTimeDBConfig.Value.Patient_Collection_Name);
 
             //Caretaker collection
             _caretakers = database.GetCollection<Caretaker>(medOnTimeDBConfig.Value.Caretaker_Collection_Name);

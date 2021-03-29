@@ -18,6 +18,7 @@ namespace MedOnTime.Core.Models.PatientSpace
         public List<String> MedicineIDS { get; set; }
 
         public List<Medication> Medicines { get; set; }
+        
         public List<Caretaker> Caretakers { get; set; }
         //public List<Prescription> Prescriptions { get; set; }
 

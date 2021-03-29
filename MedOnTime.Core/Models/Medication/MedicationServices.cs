@@ -10,7 +10,7 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
     {
         private readonly IMongoCollection<Medication> _medications;
 
-        //public MongoClientSettings ConfigurationManager { get; }
+        public MongoClientSettings ConfigurationManager { get; }
 
         public MedicationServices(IDBClient dbClient)
         {
@@ -43,7 +43,6 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
             _medications.ReplaceOne(m => m.Id == medicationToUpdate.Id, medicationToUpdate);
             return medicationToUpdate;
 
-            throw new NotImplementedException();
         }
     }
 
