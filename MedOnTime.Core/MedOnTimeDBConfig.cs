@@ -5,8 +5,10 @@ namespace MedOnTime.Core
     {
         public string Database_Name { get; set; }
 
-        public string Medication_Collection_Name { get; set; }
-
         public string Connection_String { get; set; }
+
+        public string Patient_Collection_Name { get; internal set; }
+        public string Medication_Collection_Name { get; set; }
+        public string Caretaker_Collection_Name { get; set; }
     }
 }

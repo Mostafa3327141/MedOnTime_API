@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace MedOnTime.Core.Models.Medication
+namespace MedOnTime.Core.Models.MedicationNameSpace
 {
     public class Medication
     {

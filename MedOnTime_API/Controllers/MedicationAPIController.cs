@@ -1,4 +1,4 @@
-﻿using MedOnTime.Core.Models.Medication;
+﻿using MedOnTime.Core.Models.MedicationNameSpace;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

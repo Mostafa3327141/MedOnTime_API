@@ -17,8 +17,9 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "Database_Name": "MedOnTimeDb",
         "Medication_Collection_Name": "Medication",
-        "Patient_Collection_Name": "Patient",
-        "Caretaker_Collection_Name": "Caretaker"
+        "Caretaker_Collection_Name": "Caretaker",
+        "Patient_Collection_Name": "Patient"
+
       }
     },
     "MedOnTime_API": {
@@ -31,8 +32,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "Database_Name": "MedOnTimeDb",
         "Medication_Collection_Name": "Medication",
-        "Patient_Collection_Name": "Patient",
-        "Caretaker_Collection_Name": "Caretaker"
+        "Caretaker_Collection_Name": "Caretaker",
+        "Patient_Collection_Name": "Patient"
       }
     }
   }

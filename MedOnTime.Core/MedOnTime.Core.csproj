@@ -10,9 +10,4 @@
     <PackageReference Include="MongoDB.Driver" Version="2.12.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Caretaker\" />
-    <Folder Include="Models\Patient\" />
-  </ItemGroup>
-
 </Project>

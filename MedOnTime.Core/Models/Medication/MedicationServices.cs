@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.Medication
+namespace MedOnTime.Core.Models.MedicationNameSpace
 {
     public class MedicationServices : IMedicationServices
     {
@@ -14,7 +14,7 @@ namespace MedOnTime.Core.Models.Medication
 
         public MedicationServices(IDBClient dbClient)
         {
-            _medications = dbClient.GetMedicationCollection();
+            _medications = (IMongoCollection<Medication>)dbClient.GetMedicationCollection();
 
         }
 
