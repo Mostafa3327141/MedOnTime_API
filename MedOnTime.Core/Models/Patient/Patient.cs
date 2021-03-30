@@ -3,38 +3,35 @@ using System.Collections.Generic;
 using System.Text;
 using MedOnTime.Core.Models.CaretakerNameSpace;
 using MedOnTime.Core.Models.MedicationNameSpace;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace MedOnTime.Core.Models.PatientSpace
 {
     public class Patient
     {
-        public string PatientID { get; set; }
+        [BsonId]
+        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+        public string Id { get; set; }
+        public int PatientID { get; set; }
+        public int CaretakerID { get; set; } 
+
+        [BsonElement("FirstName")]
         public string FirstName { get; set; }
+
+        [BsonElement("LastName")]
         public string LastName { get; set; }
+
+        [BsonElement("Email")]
         public string Email { get; set; }
+
+        [BsonElement("PhoneNum")]
         public int PhoneNum { get; set; }
+
+        [BsonElement("Age")]
         public int Age { get; set; }
 
-        public List<String> MedicineIDS { get; set; }
+        public List<int> MedicationIDs { get; set; }
+        public List<int> PrescriptionIDs { get; set; }
 
-        public List<Medication> Medicines { get; set; }
-        
-        public List<Caretaker> Caretakers { get; set; }
-        //public List<Prescription> Prescriptions { get; set; }
-
-        Patient() { }
-
-        Patient(string patientID, string firstName, string lastName, string email, int phoneNum, int age)
-        {
-            this.PatientID = patientID;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
-            this.PhoneNum = phoneNum;
-            this.Age = age;
-            this.Medicines = new List<Medication>();
-            this.Caretakers = new List<Caretaker>();
-            //this.Prescriptions = new List<Prescription>();
-        }
     }
 }
