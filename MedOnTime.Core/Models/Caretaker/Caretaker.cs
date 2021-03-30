@@ -23,7 +23,7 @@ namespace MedOnTime.Core.Models.CaretakerNameSpace
         public string LastName { get; set; }
         
         [BsonElement("PhoneNum")]
-        public int? PhoneNum { get; set; }
+        public string PhoneNum { get; set; }
         
         [BsonElement("Email")]
         public string Email { get; set; }

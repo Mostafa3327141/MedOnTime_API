@@ -1,15 +1,11 @@
 ﻿using MedOnTime.Core.Models.MedicationNameSpace;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedOnTime_API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("API/[controller]")]
     public class MedicationAPIController : ControllerBase
     {
         private IMedicationServices _medicationServices;

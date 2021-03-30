@@ -25,7 +25,7 @@ namespace MedOnTime.Core.Models.PatientSpace
         public string Email { get; set; }
 
         [BsonElement("PhoneNum")]
-        public int PhoneNum { get; set; }
+        public string PhoneNum { get; set; }
 
         [BsonElement("Age")]
         public int Age { get; set; }
