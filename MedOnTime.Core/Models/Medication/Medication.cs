@@ -11,7 +11,7 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
         public string Id { get; set; }
 
         [BsonElement("CaretakerID")]
-        public int CaretakerID { get; set; }
+        public string CaretakerID { get; set; }
 
         [BsonElement("PatientID")]
         public int PatientID { get; set; }
