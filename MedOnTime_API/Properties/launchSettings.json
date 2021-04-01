@@ -18,6 +18,9 @@
         "Database_Name": "MedOnTimeDb",
         "Caretaker_Collection_Name": "Caretaker",
         "Patient_Collection_Name": "Patient",
+        "Log_Collection_Name": "Log",
+        "Prescription_Collection_Name": "Prescription",
+        "Subscription_Collection_Name": "Subscription",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
@@ -30,6 +33,9 @@
         "Database_Name": "MedOnTimeDb",
         "Caretaker_Collection_Name": "Caretaker",
         "Patient_Collection_Name": "Patient",
+        "Log_Collection_Name": "Log",
+        "Prescription_Collection_Name": "Prescription",
+        "Subscription_Collection_Name": "Subscription",
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": "true",
