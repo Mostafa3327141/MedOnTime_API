@@ -33,10 +33,10 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
         [BsonElement("Quantity")]
         public int? Quantity { get; set; }
 
-        [BsonElement("FirstAlarm")]
-        public string FirstAlarm { get; set; }
+        [BsonElement("TimeOfTaking")]
+        public string TimeOfTaking { get; set; }
 
-        [BsonElement("Interval")]
-        public int Interval { get; set; }
+        [BsonElement("Frequency")]
+        public string Frequency { get; set; }
     }
 }
