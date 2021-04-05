@@ -1,6 +1,8 @@
 ﻿
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using System.Collections.Generic;
 
 namespace MedOnTime.Core.Models.MedicationNameSpace
 {
@@ -33,10 +35,16 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
         [BsonElement("Quantity")]
         public int? Quantity { get; set; }
 
-        [BsonElement("TimeOfTaking")]
-        public string TimeOfTaking { get; set; }
+        [BsonElement("FirstDoseTime")]
+        public string FirstDoseTime { get; set; }
+
+        [BsonElement("HoursBetween")]
+        public int HoursBetween { get; set; }
 
         [BsonElement("Frequency")]
         public string Frequency { get; set; }
+
+        [BsonElement("Times")]
+        public List<DateTime> Times { get; set; }
     }
 }
