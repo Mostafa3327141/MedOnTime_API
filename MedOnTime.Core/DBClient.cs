@@ -7,6 +7,9 @@ using MedOnTime.Core.Models.PrescriptionSpace;
 using MedOnTime.Core.Models.SubscriptionSpace;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+// TODO: Replace manual string conversion to byte array with GridFS storage after prototype's finished.
+using MongoDB.Driver.GridFS; // Must download in package manager https://www.nuget.org/packages/MongoDB.Driver.GridFS
+
 
 namespace MedOnTime.Core
 {

@@ -1,7 +1,10 @@
 ﻿
+using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.GridFS;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace MedOnTime.Core.Models.MedicationNameSpace
@@ -11,11 +14,9 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
         private readonly IMongoCollection<Medication> _medications;
 
         public MongoClientSettings ConfigurationManager { get; }
-
         public MedicationServices(IDBClient dbClient)
         {
             _medications = (IMongoCollection<Medication>)dbClient.GetMedicationCollection();
-
         }
 
         public Medication AddMedication(Medication medication)

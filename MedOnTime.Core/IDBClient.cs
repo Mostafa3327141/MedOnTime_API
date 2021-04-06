@@ -5,6 +5,7 @@ using MedOnTime.Core.Models.PatientSpace;
 using MedOnTime.Core.Models.PrescriptionSpace;
 using MedOnTime.Core.Models.SubscriptionSpace;
 using MongoDB.Driver;
+using MongoDB.Driver.GridFS;
 using System;
 using System.Collections.Generic;
 using System.Text;

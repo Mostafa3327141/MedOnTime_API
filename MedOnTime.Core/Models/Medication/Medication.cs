@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
@@ -24,6 +26,7 @@ namespace MedOnTime.Core.Models.MedicationNameSpace
         [BsonElement("MethodOfTaking")]
         public string MethodOfTaking { get; set; }
 
+        [BsonElement("MedicationImage")]
         public string MedicationImage { get; set; }
 
         [BsonElement("Dosage")]
