@@ -28,9 +28,15 @@ namespace MedOnTime.Core.Models.logSpace
             _logs.DeleteOne(log => log.Id == id);
         }
 
+
         public List<Log> GetLogs()
         {
             return _logs.Find(log => true).ToList();
+        }
+
+        public List<Log> GetPatientLogs(string patientID)
+        {
+            return _logs.Find(log => log.PatientID == patientID).ToList();
         }
 
         public Log GetLog(string id)

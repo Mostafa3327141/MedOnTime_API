@@ -34,6 +34,11 @@ namespace MedOnTime.Core.Models.PatientSpace
             return _patients.Find(patient => patient.Id == id).First();
         }
 
+        public List<Patient> GetPatients(int careTakerID)
+        {
+            return _patients.Find(patient => patient.CaretakerID == careTakerID).ToList();
+        }
+
         public List<Patient> GetPatients()
         {
             return _patients.Find(patient => true).ToList();
