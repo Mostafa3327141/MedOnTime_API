@@ -6,7 +6,6 @@ namespace MedOnTime.Core.Models.PatientSpace
 {
     public interface IPatientServices
     {
-        List<Patient> GetPatients(int careTakerID);
         List<Patient> GetPatients();
         Patient GetPatient(string id);
 

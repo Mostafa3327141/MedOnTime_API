@@ -15,16 +15,9 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetPatients(string caretakerID)
+        public IActionResult GetPatient()
         {
-            if (String.IsNullOrEmpty(caretakerID))
-            {
-                return Ok(_patientServices.GetPatients());
-            }
-            else
-            {
-                return Ok(_patientServices.GetPatients(int.Parse(caretakerID)));
-            }
+            return Ok(_patientServices.GetPatients());
         }
 
         [HttpGet("{id}", Name = "GetPatient")]

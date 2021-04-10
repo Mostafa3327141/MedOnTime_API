@@ -17,22 +17,22 @@ namespace MedOnTime_API.Controllers
             _logServices = logServices;
         }
 
-        [HttpGet("{LogId}")]
-        public IActionResult GetLog(string LogId)
+        [HttpGet]
+        public IActionResult GetLog()
         {
-            return Ok(_logServices.GetLog(LogId));
+            return Ok(_logServices.GetLogs());
         }
 
-        [HttpGet(Name = "GetPatientLogs")]
-        public IActionResult GetPatientLogs(string patientID)
+        [HttpGet("{id}", Name = "GetLog")]
+        public IActionResult GetLog(string id)
         {
-            if (String.IsNullOrEmpty(patientID))
+            if (String.IsNullOrEmpty(id))
             {
-                return Ok(_logServices.GetLogs());
+                return BadRequest("Value must be passed in the request body.");
             }
             else
             {
-                return Ok(_logServices.GetPatientLogs(patientID));
+                return Ok(_logServices.GetLog(id));
             }
         }
 
@@ -40,7 +40,7 @@ namespace MedOnTime_API.Controllers
         public IActionResult AddLog(Log log)
         {
             _logServices.AddLog(log);
-            return CreatedAtRoute("GetLog", new { LogId = log.Id }, log);
+            return CreatedAtRoute("GetLog", new { id = log.Id }, log);
         }
 
         [HttpDelete("{id}")]

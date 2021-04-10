@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MedOnTime.Core.Models.logSpace
 {
@@ -9,13 +11,8 @@ namespace MedOnTime.Core.Models.logSpace
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement("PatientID")]
-        public string PatientID { get; set; }
-
-        [BsonElement("TimeTake")]
+        public int PatientID { get; set; }
         public DateTime TimeTake { get; set; }
-
-        [BsonElement("MedicationID")]
-        public string MedicationID { get; set; }
+        public int MedicationID { get; set; }
     }
 }
