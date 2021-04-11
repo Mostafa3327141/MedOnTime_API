@@ -40,6 +40,23 @@
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "https://localhost:44338"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "Log_Collection_Name": "Log",
+        "Medication_Collection_Name": "Medication",
+        "Database_Name": "MedOnTimeDb",
+        "Caretaker_Collection_Name": "Caretaker",
+        "Patient_Collection_Name": "Patient",
+        "Prescription_Collection_Name": "Prescription",
+        "Subscription_Collection_Name": "Subscription",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }
