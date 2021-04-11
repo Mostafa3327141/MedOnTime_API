@@ -1,10 +1,10 @@
-﻿using MedOnTime.Core.Models.PatientSpace;
+﻿using Core.Models.PatientSpace;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.PatientSpace
+namespace Core.Models.PatientSpace
 {
     public class PatientServices : IPatientServices
     {

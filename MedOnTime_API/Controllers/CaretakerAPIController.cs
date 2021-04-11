@@ -1,4 +1,4 @@
-﻿using MedOnTime.Core.Models.CaretakerNameSpace;
+﻿using Core.Models.CaretakerNameSpace;
 using Microsoft.AspNetCore.Mvc;
 using System;
 namespace MedOnTime_API.Controllers

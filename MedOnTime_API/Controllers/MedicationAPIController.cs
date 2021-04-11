@@ -1,5 +1,5 @@
-﻿using MedOnTime.Core.Models.MedicationNameSpace;
-using MedOnTime.Core;
+﻿using Core.Models.MedicationNameSpace;
+using Core;
 using Microsoft.AspNetCore.Mvc;
 using System;
 

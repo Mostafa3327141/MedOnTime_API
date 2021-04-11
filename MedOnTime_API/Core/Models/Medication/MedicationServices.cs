@@ -1,13 +1,13 @@
 ﻿
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.GridFS;
+//using MongoDB.Driver.GridFS;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace MedOnTime.Core.Models.MedicationNameSpace
+namespace Core.Models.MedicationNameSpace
 {
     public class MedicationServices : IMedicationServices
     {

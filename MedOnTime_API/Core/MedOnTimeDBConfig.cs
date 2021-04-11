@@ -1,5 +1,5 @@
 ﻿
-namespace MedOnTime.Core
+namespace Core
 {
     public class MedOnTimeDBConfig
     {

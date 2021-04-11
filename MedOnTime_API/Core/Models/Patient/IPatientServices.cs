@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.PatientSpace
+namespace Core.Models.PatientSpace
 {
     public interface IPatientServices
     {

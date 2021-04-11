@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.SubscriptionSpace
+namespace Core.Models.SubscriptionSpace
 {
     public class Subscription
     {

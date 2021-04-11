@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.CaretakerNameSpace
+namespace Core.Models.CaretakerNameSpace
 {
     public class CaretakerServices : ICaretakerServices
     {

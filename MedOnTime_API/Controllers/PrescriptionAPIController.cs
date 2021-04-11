@@ -1,4 +1,4 @@
-﻿using MedOnTime.Core.Models.PrescriptionSpace;
+﻿using Core.Models.PrescriptionSpace;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

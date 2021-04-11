@@ -1,12 +1,10 @@
-﻿
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
+﻿using Microsoft.AspNetCore.Http;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 
-namespace MedOnTime.Core.Models.MedicationNameSpace
+namespace Core.Models.MedicationNameSpace
 {
     public class Medication
     {

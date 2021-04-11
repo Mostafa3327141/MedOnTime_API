@@ -1,10 +1,10 @@
-﻿using MedOnTime.Core.Models.PatientSpace;
+﻿using Core.Models.PatientSpace;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.CaretakerNameSpace
+namespace Core.Models.CaretakerNameSpace
 {
     public class Caretaker
     {

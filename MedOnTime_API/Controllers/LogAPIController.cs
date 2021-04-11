@@ -1,9 +1,6 @@
-﻿using MedOnTime.Core.Models.logSpace;
+﻿using Core.Models.logSpace;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedOnTime_API.Controllers
 {

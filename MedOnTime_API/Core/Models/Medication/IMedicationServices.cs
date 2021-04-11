@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.MedicationNameSpace
+namespace Core.Models.MedicationNameSpace
 {
     public interface IMedicationServices
     {

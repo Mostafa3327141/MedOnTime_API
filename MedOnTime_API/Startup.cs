@@ -1,10 +1,10 @@
-using MedOnTime.Core;
-using MedOnTime.Core.Models.CaretakerNameSpace;
-using MedOnTime.Core.Models.logSpace;
-using MedOnTime.Core.Models.MedicationNameSpace;
-using MedOnTime.Core.Models.PatientSpace;
-using MedOnTime.Core.Models.PrescriptionSpace;
-using MedOnTime.Core.Models.SubscriptionSpace;
+using Core;
+using Core.Models.CaretakerNameSpace;
+using Core.Models.logSpace;
+using Core.Models.MedicationNameSpace;
+using Core.Models.PatientSpace;
+using Core.Models.PrescriptionSpace;
+using Core.Models.SubscriptionSpace;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

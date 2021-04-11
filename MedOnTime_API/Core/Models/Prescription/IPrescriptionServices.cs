@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedOnTime.Core.Models.PrescriptionSpace
+namespace Core.Models.PrescriptionSpace
 {
     public interface IPrescriptionServices
     {

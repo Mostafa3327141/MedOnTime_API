@@ -1,4 +1,4 @@
-﻿using MedOnTime.Core.Models.SubscriptionSpace;
+﻿using Core.Models.SubscriptionSpace;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
