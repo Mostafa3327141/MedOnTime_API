@@ -16,22 +16,28 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetMedication()
+        public IActionResult GetMedication(string key = "")
         {
+            if ("sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             return Ok(_medicationServices.GetMedications());
         }
 
         [HttpGet("{id}", Name = "GetMedication")]
-        public IActionResult GetMedication(string id)
+        public IActionResult GetMedication(string key = "", string? id = null)
         {
+            if ("sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                return Ok(_medicationServices.GetMedication(id));
-            }
+
+            return Ok(_medicationServices.GetMedication(id));
         }
 
         [HttpPost]
@@ -42,17 +48,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteMedication(string id)
+        public IActionResult DeleteMedication(string key = "", string? id = null)
         {
+            if ("sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _medicationServices.DeleteMedication(id);
-                return NoContent();
-            }
+
+            _medicationServices.DeleteMedication(id);
+            return NoContent();
         }
 
         [HttpPut]

@@ -19,22 +19,28 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetPrescription()
+        public IActionResult GetPrescription(string key = "")
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             return Ok(_prescriptionServices.GetPrescriptions());
         }
 
         [HttpGet("{id}", Name = "GetPrescription")]
-        public IActionResult GetPrescription(string id)
+        public IActionResult GetPrescription(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                return Ok(_prescriptionServices.GetPrescription(id));
-            }
+            
+            return Ok(_prescriptionServices.GetPrescription(id));
         }
 
         [HttpPost]
@@ -45,17 +51,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeletePrescription(string id)
+        public IActionResult DeletePrescription(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _prescriptionServices.DeletePrescription(id);
-                return NoContent();
-            }
+            
+            _prescriptionServices.DeletePrescription(id);
+            return NoContent();
         }
         [HttpPut]
         public IActionResult UpdatePrescription(Prescription prescriptionToUpdate)

@@ -14,22 +14,28 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCaretaker()
+        public IActionResult GetCaretaker(string key = "")
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             return Ok(_caretakerServices.GetCaretakers());
         }
 
         [HttpGet("{id}", Name = "GetCaretaker")]
-        public IActionResult GetCaretaker(string id)
+        public IActionResult GetCaretaker(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                return Ok(_caretakerServices.GetCaretaker(id));
-            }
+
+            return Ok(_caretakerServices.GetCaretaker(id));
         }
 
         [HttpPost]
@@ -40,17 +46,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCaretaker(string id)
+        public IActionResult DeleteCaretaker(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _caretakerServices.DeleteCaretaker(id);
-                return NoContent();
-            }
+
+            _caretakerServices.DeleteCaretaker(id);
+            return NoContent();
         }
 
         [HttpPut]

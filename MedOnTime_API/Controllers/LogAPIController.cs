@@ -15,22 +15,28 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet("{LogId}")]
-        public IActionResult GetLog(string LogId)
+        public IActionResult GetLog(string key = "", string? LogId = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             return Ok(_logServices.GetLog(LogId));
         }
 
         [HttpGet(Name = "GetPatientLogs")]
-        public IActionResult GetPatientLogs(string patientID)
+        public IActionResult GetPatientLogs(string key = "", string? patientID = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(patientID))
             {
                 return Ok(_logServices.GetLogs());
             }
-            else
-            {
-                return Ok(_logServices.GetPatientLogs(patientID));
-            }
+            
+            return Ok(_logServices.GetPatientLogs(patientID));
         }
 
         [HttpPost]
@@ -41,17 +47,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteLog(string id)
+        public IActionResult DeleteLog(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _logServices.DeleteLog(id);
-                return NoContent();
-            }
+
+            _logServices.DeleteLog(id);
+            return NoContent();
         }
         [HttpPut]
         public IActionResult UpdateLog(Log logToUpdate)
