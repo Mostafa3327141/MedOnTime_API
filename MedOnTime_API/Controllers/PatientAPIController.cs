@@ -15,29 +15,34 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetPatients(string caretakerID)
+        public IActionResult GetPatients(string key = "", string? caretakerID = null)
         {
+            if ("sH5O!2cdOqP1%".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(caretakerID))
             {
                 return Ok(_patientServices.GetPatients());
             }
-            else
-            {
-                return Ok(_patientServices.GetPatients(int.Parse(caretakerID)));
-            }
+            
+            return Ok(_patientServices.GetPatients(int.Parse(caretakerID)));
+
         }
 
         [HttpGet("{id}", Name = "GetPatient")]
-        public IActionResult GetPatient(string id)
+        public IActionResult GetPatient(string key = "", string? id = null)
         {
+            if ("sH5O!2cdOqP1%".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                return Ok(_patientServices.GetPatient(id));
-            }
+            
+            return Ok(_patientServices.GetPatient(id));
         }
 
         [HttpPost]
@@ -48,17 +53,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeletePatient(string id)
+        public IActionResult DeletePatient(string key = "", string? id = null)
         {
+            if ("sH5O!2cdOqP1%".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _patientServices.DeletePatient(id);
-                return NoContent();
-            }
+            
+            _patientServices.DeletePatient(id);
+            return NoContent();
         }
 
         [HttpPut]

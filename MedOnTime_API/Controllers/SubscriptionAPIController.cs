@@ -19,22 +19,28 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetSubscriptions()
+        public IActionResult GetSubscriptions(string key = "")
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             return Ok(_subscriptionServices.GetSubscriptions());
         }
 
         [HttpGet("{id}", Name = "GetSubscriptions")]
-        public IActionResult GetSubscription(string id)
+        public IActionResult GetSubscription(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                return Ok(_subscriptionServices.GetSubscription(id));
-            }
+            
+            return Ok(_subscriptionServices.GetSubscription(id));
         }
 
         [HttpPost]
@@ -45,17 +51,19 @@ namespace MedOnTime_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteSubscription(string id)
+        public IActionResult DeleteSubscription(string key = "", string? id = null)
         {
+            if (!"sH5O!2cdOqP1^".Equals(key))
+            {
+                return BadRequest("Invalid API Key.");
+            }
             if (String.IsNullOrEmpty(id))
             {
                 return BadRequest("Value must be passed in the request body.");
             }
-            else
-            {
-                _subscriptionServices.DeleteSubscription(id);
-                return NoContent();
-            }
+            
+            _subscriptionServices.DeleteSubscription(id);
+            return NoContent();
         }
         [HttpPut]
         public IActionResult UpdateSubscription(Subscription subscriptionToUpdate)
