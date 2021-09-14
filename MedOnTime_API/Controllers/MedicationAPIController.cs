@@ -18,7 +18,7 @@ namespace MedOnTime_API.Controllers
         [HttpGet]
         public IActionResult GetMedication(string key = "")
         {
-            if ("sH5O!2cdOqP1^".Equals(key))
+            if (!"sH5O!2cdOqP1^".Equals(key))
             {
                 return BadRequest("Invalid API Key.");
             }
@@ -28,7 +28,7 @@ namespace MedOnTime_API.Controllers
         [HttpGet("{id}", Name = "GetMedication")]
         public IActionResult GetMedication(string key = "", string? id = null)
         {
-            if ("sH5O!2cdOqP1^".Equals(key))
+            if (!"sH5O!2cdOqP1^".Equals(key))
             {
                 return BadRequest("Invalid API Key.");
             }
@@ -50,7 +50,7 @@ namespace MedOnTime_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteMedication(string key = "", string? id = null)
         {
-            if ("sH5O!2cdOqP1^".Equals(key))
+            if (!"sH5O!2cdOqP1^".Equals(key))
             {
                 return BadRequest("Invalid API Key.");
             }
