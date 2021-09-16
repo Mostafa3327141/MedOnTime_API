@@ -18,7 +18,10 @@ namespace Core.Models.PatientSpace
         public string LastName { get; set; }
 
         [BsonElement("Email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
+
+        [BsonElement("Password")]
+        public string Password { get; set; }
 
         [BsonElement("PhoneNum")]
         public string PhoneNum { get; set; }
