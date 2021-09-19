@@ -29,6 +29,7 @@ namespace Core.Models.PatientSpace
 
         [BsonElement("Age")]
         public int Age { get; set; }
+
         [BsonElement("UnSelectedShapes")]
         public List<Shape> UnSelectedShapes { get; set; }
         public List<int> MedicationIDs { get; set; }
