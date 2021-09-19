@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core.Models.MedicationNameSpace;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Core.Models.PatientSpace
@@ -28,7 +29,8 @@ namespace Core.Models.PatientSpace
 
         [BsonElement("Age")]
         public int Age { get; set; }
-
+        [BsonElement("UnSelectedShapes")]
+        public List<Shape> UnSelectedShapes { get; set; }
         public List<int> MedicationIDs { get; set; }
         public List<int> PrescriptionIDs { get; set; }
 
