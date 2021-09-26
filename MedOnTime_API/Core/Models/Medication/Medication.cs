@@ -21,17 +21,8 @@ namespace Core.Models.MedicationNameSpace
         [BsonElement("MedicationName")]
         public string MedicationName { get; set; }
 
-        [BsonElement("MethodOfTaking")]
-        public string MethodOfTaking { get; set; }
-
-        [BsonElement("MedicationImage")]
-        public string MedicationImage { get; set; }
-
-        [BsonElement("Dosage")]
-        public string Dosage { get; set; }
-
-        [BsonElement("MedicationType")]
-        public string MedicationType { get; set; }
+        [BsonElement("Uint")]
+        public string Uint { get; set; }
 
         [BsonElement("Quantity")]
         public int? Quantity { get; set; }
