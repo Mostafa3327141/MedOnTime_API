@@ -21,8 +21,8 @@ namespace Core.Models.MedicationNameSpace
         [BsonElement("MedicationName")]
         public string MedicationName { get; set; }
 
-        [BsonElement("Uint")]
-        public string Uint { get; set; }
+        [BsonElement("Unit")]
+        public string Unit { get; set; }
 
         [BsonElement("Quantity")]
         public int? Quantity { get; set; }
