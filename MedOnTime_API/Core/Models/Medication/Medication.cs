@@ -21,6 +21,9 @@ namespace Core.Models.MedicationNameSpace
         [BsonElement("MedicationName")]
         public string MedicationName { get; set; }
 
+        [BsonElement("MedicationImage")]
+        public string MedicationImage { get; set; }
+
         [BsonElement("Unit")]
         public string Unit { get; set; }
 
