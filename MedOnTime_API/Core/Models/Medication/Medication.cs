@@ -30,6 +30,9 @@ namespace Core.Models.MedicationNameSpace
         [BsonElement("Quantity")]
         public int? Quantity { get; set; }
 
+        [BsonElement("Condition")]
+        public string Condition { get; set; }
+
         [BsonElement("FirstDoseTime")]
         public string FirstDoseTime { get; set; }
 
