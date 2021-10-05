@@ -17,5 +17,8 @@ namespace Core.Models.logSpace
 
         [BsonElement("MedicationID")]
         public string MedicationID { get; set; }
+
+        [BsonElement("MedicationName")]
+        public string MedicationName { get; set; }
     }
 }
