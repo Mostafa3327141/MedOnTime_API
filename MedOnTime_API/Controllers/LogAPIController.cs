@@ -14,13 +14,18 @@ namespace MedOnTime_API.Controllers
             _logServices = logServices;
         }
 
-        [HttpGet("{LogId}")]
+        [HttpGet("{LogId}", Name = "GetLog")]
         public IActionResult GetLog(string key = "", string? LogId = null)
         {
             if (!"sH5O!2cdOqP1^".Equals(key))
             {
                 return BadRequest("Invalid API Key.");
             }
+            if (String.IsNullOrEmpty(LogId))
+            {
+                return BadRequest("Value must be passed in the request body.");
+            }
+
             return Ok(_logServices.GetLog(LogId));
         }
 

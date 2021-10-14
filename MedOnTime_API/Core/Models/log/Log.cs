@@ -12,8 +12,8 @@ namespace Core.Models.logSpace
         [BsonElement("PatientID")]
         public string PatientID { get; set; }
 
-        [BsonElement("TimeTake")]
-        public DateTime TimeTake { get; set; }
+/*        [BsonElement("TimeTake")]
+        public DateTime TimeTake { get; set; }*/
 
         [BsonElement("MedicationID")]
         public string MedicationID { get; set; }
