@@ -1,5 +1,4 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
-using System;
 
 namespace Core.Models.logSpace
 {
@@ -12,8 +11,8 @@ namespace Core.Models.logSpace
         [BsonElement("PatientID")]
         public string PatientID { get; set; }
 
-/*        [BsonElement("TimeTake")]
-        public DateTime TimeTake { get; set; }*/
+        [BsonElement("TimeTake")]
+        public string TimeTake { get; set; }
 
         [BsonElement("MedicationID")]
         public string MedicationID { get; set; }

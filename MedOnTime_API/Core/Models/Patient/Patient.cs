@@ -35,8 +35,6 @@ namespace Core.Models.PatientSpace
 
         [BsonElement("UnSelectedShapes")]
         public List<Shape> UnSelectedShapes { get; set; }
-        public List<int> MedicationIDs { get; set; }
-        public List<int> PrescriptionIDs { get; set; }
 
     }
 }

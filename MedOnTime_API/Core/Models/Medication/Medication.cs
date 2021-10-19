@@ -44,8 +44,5 @@ namespace Core.Models.MedicationNameSpace
 
         [BsonElement("Shape")]
         public string Shape { get; set; }
-
-        [BsonElement("Times")]
-        public List<DateTime> Times { get; set; }
     }
 }
