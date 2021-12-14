@@ -23,7 +23,7 @@ namespace Core
         private readonly IMongoCollection<Prescription> _Prescriptions;
         private readonly IMongoCollection<Subscription> _Subscriptions;
 
-        public DBClient(IOptions<MedOnTimeDBConfig> medOnTimeDBConfig)
+        public DBClient()
         {
             var client = new MongoClient("mongodb+srv://medontime:admin@medontime.fgmuf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             var database = client.GetDatabase("MedOnTimeDb");
