@@ -25,26 +25,26 @@ namespace Core
 
         public DBClient(IOptions<MedOnTimeDBConfig> medOnTimeDBConfig)
         {
-            var client = new MongoClient(/*medOnTimeDBConfig.Value.Connection_String*/"mongodb+srv://medontime:admin@medontime.fgmuf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-            var database = client.GetDatabase(/*medOnTimeDBConfig.Value.Database_Name*/"MedOnTimeDb");
+            var client = new MongoClient("mongodb+srv://medontime:admin@medontime.fgmuf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            var database = client.GetDatabase("MedOnTimeDb");
 
             //Medication collection
-            _medications = database.GetCollection<Medication>(/*medOnTimeDBConfig.Value.Medication_Collection_Name*/"Medication");
+            _medications = database.GetCollection<Medication>("Medication");
 
             //Patient collection
-            _patients = database.GetCollection<Patient>(/*medOnTimeDBConfig.Value.Patient_Collection_Name*/"Patient");
+            _patients = database.GetCollection<Patient>("Patient");
 
             //Caretaker collection
-            _caretakers = database.GetCollection<Caretaker>(/*medOnTimeDBConfig.Value.Caretaker_Collection_Name*/"Caretaker");
+            _caretakers = database.GetCollection<Caretaker>("Caretaker");
 
             //Log collection
-            _Logs = database.GetCollection<Log>(/*medOnTimeDBConfig.Value.Log_Collection_Name*/"Log");
+            _Logs = database.GetCollection<Log>("Log");
 
             //Prescription collection
-            _Prescriptions = database.GetCollection<Prescription>(/*medOnTimeDBConfig.Value.Prescription_Collection_Name*/"Prescription");
+            _Prescriptions = database.GetCollection<Prescription>("Prescription");
 
             //Subscription collection
-            _Subscriptions = database.GetCollection<Subscription>(/*medOnTimeDBConfig.Value.Subscription_Collection_Name*/"Subscription");
+            _Subscriptions = database.GetCollection<Subscription>("Subscription");
         }
 
         public IMongoCollection<Medication> GetMedicationCollection() => _medications;
